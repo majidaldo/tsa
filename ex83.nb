@@ -1,0 +1,263 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      7743,        254]
+NotebookOptionsPosition[      6818,        217]
+NotebookOutlinePosition[      7220,        234]
+CellTagsIndexPosition[      7177,        231]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Sigma", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"2", ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "1"}], "}"}]}], "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6066585556101933`*^9, 3.60665858276221*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"L", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{".5", ",", "1"}], "}"}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Linv", "=", 
+   RowBox[{"Inverse", "[", "L", "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.606656544116476*^9, 3.6066566622718773`*^9}, {
+   3.606657225473587*^9, 3.6066572321910443`*^9}, 3.606658266705492*^9, {
+   3.606658398469923*^9, 3.6066584150108986`*^9}, 3.6066584575441217`*^9, {
+   3.6066586478313856`*^9, 3.6066586487559996`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["Linv"], "Input",
+ CellChangeTimes->{
+  3.606659262614321*^9, {3.606659341141429*^9, 3.606659350907909*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1.`", ",", "0.`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "0.5`"}], ",", "1.`"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.6066593424402905`*^9, 3.606659351642397*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"G", "=", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{"Linv", ".", "Sigma"}], ")"}], ".", 
+   RowBox[{"Inverse", "[", 
+    RowBox[{"Transpose", "[", "L", "]"}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.606658498828517*^9, 3.6066585473066826`*^9}, {
+  3.606658673557456*^9, 3.606658718198077*^9}, {3.6066588101711063`*^9, 
+  3.6066588602143116`*^9}, {3.606658915345894*^9, 3.606658988352337*^9}, {
+  3.606659086261304*^9, 3.6066590934981055`*^9}, {3.6066591357921696`*^9, 
+  3.606659194222941*^9}, {3.6066594067439585`*^9, 3.6066594258156137`*^9}, {
+  3.606659641157503*^9, 3.6066596555940814`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"2.`", ",", "0.`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.5`"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.606659195043486*^9, 3.6066594265070724`*^9, {3.6066596429877214`*^9, 
+   3.6066596570000143`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"L", ".", "G", ".", 
+  RowBox[{"Transpose", "[", "L", "]"}], " ", 
+  RowBox[{"(*", 
+   RowBox[{"confirm", " ", "get", " ", "back", " ", "sigma"}], 
+   "*)"}]}]], "Input",
+ CellChangeTimes->{{3.6066593868067303`*^9, 3.606659396903428*^9}, {
+  3.606659707594587*^9, 3.606659738605163*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"2.`", ",", "1.`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1.`", ",", "1.`"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.606659397301693*^9, 3.606659429606128*^9, 3.606659673570009*^9, {
+   3.6066597242086115`*^9, 3.6066597397429185`*^9}}]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"rt", "=", 
+   RowBox[{"{", 
+    RowBox[{"r1t", ",", "r2t"}], "}"}]}], ";", 
+  RowBox[{"rtm1", "=", 
+   RowBox[{"{", 
+    RowBox[{"r1tm1", ",", "r2tm1"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"phi0", "=", 
+   RowBox[{"{", 
+    RowBox[{".2", ",", ".4"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Phi", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{".2", ",", ".3"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", ".6"}], ",", "1.1"}], "}"}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"bt", "=", 
+   RowBox[{"{", 
+    RowBox[{"b1t", ",", "b2t"}], "}"}]}], ";", 
+  RowBox[{"(*", 
+   RowBox[{"Linv", ".", 
+    RowBox[{"{", 
+     RowBox[{"at1", ",", "at2"}], "}"}]}], "*)"}]}]}], "Input",
+ CellChangeTimes->{{3.6066597955209293`*^9, 3.6066598427692814`*^9}, {
+  3.6066599426375484`*^9, 3.6066599648372784`*^9}, {3.6066606794284425`*^9, 
+  3.606660773973177*^9}, {3.6066608237281914`*^9, 3.606660849712434*^9}, {
+  3.6066609168870063`*^9, 3.6066609380240316`*^9}, {3.6066610164300575`*^9, 
+  3.6066610454473114`*^9}, {3.6066611747901363`*^9, 3.6066611923307757`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"structForm", "=", 
+  RowBox[{
+   RowBox[{"Linv", ".", "rt"}], "==", 
+   RowBox[{
+    RowBox[{"Linv", ".", "phi0"}], "+", 
+    RowBox[{"Linv", ".", "Phi", ".", "rtm1"}], "+", "bt"}]}]}]], "Input",
+ CellChangeTimes->{{3.606661054800519*^9, 3.6066611703331795`*^9}, {
+  3.6066612023164024`*^9, 3.6066612389707236`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"0.`", "\[VeryThinSpace]", "+", 
+     RowBox[{"1.`", " ", "r1t"}]}], ",", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "0.5`"}], " ", "r1t"}], "+", 
+     RowBox[{"1.`", " ", "r2t"}]}]}], "}"}], "\[Equal]", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"0.2`", "\[VeryThinSpace]", "+", "b1t", "+", 
+     RowBox[{"0.2`", " ", "r1tm1"}], "+", 
+     RowBox[{"0.3`", " ", "r2tm1"}]}], ",", 
+    RowBox[{"0.30000000000000004`", "\[VeryThinSpace]", "+", "b2t", "-", 
+     RowBox[{"0.7`", " ", "r1tm1"}], "+", 
+     RowBox[{"0.9500000000000001`", " ", "r2tm1"}]}]}], "}"}]}]], "Output",
+ CellChangeTimes->{
+  3.6066611031616087`*^9, {3.606661211939788*^9, 3.6066612402355657`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"structForm", "[", 
+     RowBox[{"[", 
+      RowBox[{"1", ",", "2"}], "]"}], "]"}], "==", 
+    RowBox[{"structForm", "[", 
+     RowBox[{"[", 
+      RowBox[{"2", ",", "2"}], "]"}], "]"}]}], ",", "r2t"}], "]"}]], "Input",
+ CellChangeTimes->{{3.606661245244888*^9, 3.6066612923061132`*^9}, {
+  3.6066613700477*^9, 3.6066614406665573`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"r2t", "\[Rule]", 
+    RowBox[{"0.30000000000000004`", "\[VeryThinSpace]", "+", 
+     RowBox[{"1.`", " ", "b2t"}], "+", 
+     RowBox[{"0.5`", " ", "r1t"}], "-", 
+     RowBox[{"0.7`", " ", "r1tm1"}], "+", 
+     RowBox[{"0.9500000000000001`", " ", "r2tm1"}]}]}], "}"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.6066612507285247`*^9, 3.6066612930836296`*^9}, {
+  3.6066613714976616`*^9, 3.6066613931450267`*^9}, {3.6066614288787355`*^9, 
+  3.606661441844342*^9}}]
+}, Open  ]]
+},
+WindowSize->{608, 641},
+WindowMargins->{{224, Automatic}, {Automatic, 30}},
+ShowSelection->True,
+Magnification->1.3000000715255737`,
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 293, 9, 39, "Input"],
+Cell[853, 31, 606, 16, 65, "Input"],
+Cell[CellGroupData[{
+Cell[1484, 51, 121, 2, 39, "Input"],
+Cell[1608, 55, 269, 8, 39, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1914, 68, 620, 12, 39, "Input"],
+Cell[2537, 82, 303, 9, 39, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2877, 96, 310, 7, 39, "Input"],
+Cell[3190, 105, 322, 9, 39, "Output"]
+}, Open  ]],
+Cell[3527, 117, 1206, 34, 140, "Input"],
+Cell[CellGroupData[{
+Cell[4758, 155, 340, 8, 65, "Input"],
+Cell[5101, 165, 734, 19, 90, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5872, 189, 409, 11, 65, "Input"],
+Cell[6284, 202, 518, 12, 65, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
